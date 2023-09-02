@@ -115,17 +115,37 @@ const card = document.getElementsByClassName("mural_words")[0]
 mural_letter.innerText = randomString(1530)
 
 
+function boldletters(){
+    const textArray = mural_letter.textContent.split(" ")
+    const randomIndex = () => Math.floor(Math.random() * textArray.length);
+    for(let i = 0;i <40;i++){
+        const index = randomIndex();
+        textArray[index] = `<div class="bold-letter">${textArray[index]}</div>`;
+
+
+
+
+    }
+
+    mural_letter.innerHTML = textArray.join(' ');
+
+}
+
 const handleOnMove = e => {
     
   
     // mural_letter.style.setProperty("--x", `${x}px`);
     // mural_letter.style.setProperty("--y", `${y}px`);
   
-    mural_letter.innerText = randomString(200);    
+    mural_letter.innerText = randomString(200);   
+    boldletters() 
   }
   
-
+boldletters()
 card.addEventListener("mousemove",handleOnMove)
+
+
+
 
 
 
@@ -142,8 +162,26 @@ const observer = new IntersectionObserver(entries => {
 
     lastScrollTop = window.scrollY;
 });
+const observer2 = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            entry.target.classList.add('loadbar');
+        }
+    });
+
+
+    lastScrollTop = window.scrollY;
+});
 
 
 document.querySelectorAll('.scrollup').forEach(element => {
     observer.observe(element);
 });
+
+document.querySelectorAll('.color').forEach(element => {
+    observer2.observe(element);
+});
+
