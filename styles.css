@@ -568,6 +568,9 @@ h2 {
 
 
 @media screen and (max-width:750px) {
+    .main{
+        margin:0 5rem;
+        }
 
     .image_health {
         grid-template-columns: 1fr;
