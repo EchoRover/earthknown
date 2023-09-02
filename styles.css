@@ -568,9 +568,13 @@ h2 {
 
 
 @media screen and (max-width:750px) {
-    .main{
-        margin:0 5rem;
+    main{
+        margin:1rem 0.5rem;
         }
+
+    .body{
+        margin: 0;
+    }
 
     .image_health {
         grid-template-columns: 1fr;
@@ -579,6 +583,8 @@ h2 {
         justify-content: center;
         padding: 5px;
         text-align: center !important;
+        
+        
 
     }
 
@@ -630,7 +636,7 @@ h2 {
     .mural_words span {
         font-size: 3rem
     }
+    
+    
 
-}
-
-;
+};
