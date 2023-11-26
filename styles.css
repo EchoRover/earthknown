@@ -268,7 +268,9 @@ section {}
     }
 
 }
-
+.image_container{
+    max-height: 350px;
+}
 .image_container img {
 
     width: 100%;
@@ -397,6 +399,7 @@ h2 {
 
 .end h1 {
     margin-bottom: 1rem;
+    border-bottom: 2px solid #333;
 }
 
 .end span {
@@ -585,8 +588,19 @@ a {
     outline: none;
     border-bottom: 2px solid #2ecc71;
   }
-
-
+.aboutus{
+    background-color: #f0f0e5;
+    padding: 5px;
+    margin-top: 1rem;
+    border-radius: 1rem;
+}
+  .aboutus h2 {
+    margin: 5px;
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    
+}
 
 
 
@@ -663,3 +677,4 @@ a {
     
 
 };
+
